@@ -22,16 +22,16 @@ df = pd.read_csv("Iris.csv", encoding='ISO-8859-1')
 
 
 # Step 3: Explore the dataset
-print("\n🔍 First 5 rows:")
+print("\nFirst 5 rows:")
 print(df.head())
 
-print("\n📊 Dataset Info:")
+print("\n Dataset Info:")
 print(df.info())
 
-print("\n📈 Statistical Summary:")
+print("\n Statistical Summary:")
 print(df.describe())
 
-print("\n❓ Missing Values:")
+print("\n Missing Values:")
 print(df.isnull().sum())
 
 # Step 4: Clean the data (drop 'Id' column)
@@ -59,7 +59,7 @@ plt.show()
 le = LabelEncoder()
 df['Species'] = le.fit_transform(df['Species'])  # Setosa=0, Versicolor=1, Virginica=2
 
-print("\n✅ Encoded Species:")
+print("\nEncoded Species:")
 print(df['Species'].unique())
 
 # Step 7: Prepare features and labels
@@ -69,7 +69,7 @@ y = df['Species']
 # Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-print(f"\n📦 Train Samples: {X_train.shape[0]}, Test Samples: {X_test.shape[0]}")
+print(f"\n Train Samples: {X_train.shape[0]}, Test Samples: {X_test.shape[0]}")
 
 # Step 8: Train Logistic Regression Model
 model = LogisticRegression(max_iter=200)
@@ -79,9 +79,9 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
 # Step 10: Evaluate the Model
-print("\n🎯 Accuracy Score:", accuracy_score(y_test, y_pred))
+print("\n Accuracy Score:", accuracy_score(y_test, y_pred))
 
-print("\n📃 Classification Report:")
+print("\n Classification Report:")
 print(classification_report(y_test, y_pred, target_names=le.classes_))
 
 # Confusion Matrix
@@ -99,4 +99,4 @@ sample = np.array([[5.1, 3.5, 1.4, 0.2]])  # Example measurements
 prediction = model.predict(sample)
 species = le.inverse_transform(prediction)[0]
 
-print(f"\n🌸 Predicted Species for sample {sample.tolist()[0]}: {species}")
+print(f"\n Predicted Species for sample {sample.tolist()[0]}: {species}")
