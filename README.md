@@ -1,11 +1,11 @@
-# 🌸 Iris Flower Classification
+# Iris Flower Classification
 
 A machine learning project to classify Iris flowers using scikit-learn.
 
-## 📝 Description
+## Description
 This project implements a Logistic Regression model to classify Iris flowers into their respective species based on sepal and petal measurements.
 
-## 🔧 Requirements
+## Requirements
 - Python 3.x
 - pandas
 - numpy
