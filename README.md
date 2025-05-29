@@ -13,30 +13,12 @@ This project implements a Logistic Regression model to classify Iris flowers int
 - matplotlib
 - seaborn
 
-## 🚀 Installation & Usage
-1. Clone the repository:
-```bash
-git clone https://github.com/ayushman46/Iris_Classifier.git
-```
 
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
 
-3. Run the classifier:
-```bash
-python iris_classifier.py
-```
-
-## 📊 Features
+## Features
 - Data visualization with seaborn and matplotlib
 - Implementation of Logistic Regression
 - Model evaluation metrics
 - Sample prediction capability
 
-## 📈 Results
-The model achieves high accuracy in classifying Iris species using simple logistic regression.
 
-## 📝 License
-MIT License
